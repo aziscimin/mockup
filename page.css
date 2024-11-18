@@ -1,0 +1,411 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Gaya untuk header */
+/* Gaya untuk header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e51a2;
+  }
+  
+  .logo a img {
+    height: 60px; /* Ukuran logo */
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 20px;
+    margin: 10px, 0px, 10px, 0px ;
+    font-size: large;
+    font-weight: bold;
+
+  }
+  
+  .nav-links li {
+    margin: 0 10px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+  }
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Kotak Breaking News Header */
+.breaking-news-header {
+    background-color: #2e51a2;
+    color: white;
+    text-align: left;
+    padding: 0.1px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Gaya untuk breaking-news */
+.breaking-news {
+    display: grid;
+    grid-template-columns: 1fr 10px 1fr;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid #ddd; /* Menambahkan border 2px */
+    padding: 10px;
+}
+
+.breaking-news .left-grid {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.breaking-news .left-grid img {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.breaking-news .news-text h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.breaking-news .news-text .time {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.breaking-news .divider {
+    width: 2px;
+    background: #ddd;
+    height: 70%;
+    justify-self: center;
+}
+
+.breaking-news .right-grid h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.breaking-news .right-grid .time {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+
+
+.left-grid {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.left-grid img {
+    width: 100px; /* Ukuran gambar kecil */
+    height: 70px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.news-text h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.news-text .time {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.divider {
+    width: 2px;
+    background: #ddd; /* Pembatas di tengah */
+    height: 70%;
+    justify-self: center;
+    margin-right: 20px;
+}
+
+.right-grid h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.right-grid .time {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.breaking-news h2 {
+    font-weight: bold;
+    color: #333;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1.5fr; /* Kolom kiri, tengah, kanan */
+    grid-template-rows: auto auto; /* Baris untuk konten utama dan bottom-section */
+    gap: 20px;
+    padding: 20px;
+    max-height: 100vh; /* Menjamin tinggi main tidak melebihi layar */
+}
+
+aside.left {
+    background: #fff;
+    position: relative; /* Untuk membuat pseudo-element bekerja */
+    height: auto; /* Membiarkan tinggi sesuai konten */
+}
+
+aside.left::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px; /* Mengatur jarak garis dari aside */
+    width: 1.5px; /* Lebar garis */
+    height: 100%; /* Tinggi garis sesuai dengan aside */
+    background-color: gray; /* Warna garis */
+    
+}
+
+ul {
+    list-style-type: none; /* Menghilangkan titik pada daftar */
+    padding: 0; /* Menghilangkan padding default */
+}
+
+  
+.border-example {
+    border: 1.5px solid gray; /* Border 1.5px dengan warna abu-abu */
+    margin-bottom: 2px;
+}
+
+.border-example1 {
+    border: 1.5px solid gray; /* Border 1.5px dengan warna abu-abu */
+    margin-bottom: 2px;
+    margin-top: 10px;
+}
+
+.right {
+    background: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    grid-row: 1 / span 2; /* Membiarkan right menempati dua baris penuh */
+    height: 100%;
+}
+
+.numbered-list {
+    list-style: none; /* Menghapus nomor default */
+    padding: 0;
+    margin: 0;
+    counter-reset: list-item; /* Reset counter */
+}
+  
+.numbered-list li {
+    counter-increment: list-item; /* Tambahkan nomor */
+    position: relative; /* Dibutuhkan untuk pseudo-element */
+    padding: 10px 0;
+    font-size: 14px;
+    padding-left: 25px; /* Menambahkan jarak antara angka dan teks */
+}
+  
+.numbered-list li::before {
+    content: counter(list-item) ". "; /* Tambahkan nomor otomatis */
+    font-weight: bold;
+    color: #000;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+}
+  
+.numbered-list li::after {
+    content: ""; /* Tambahkan elemen kosong untuk garis */
+    display: block;
+    height: 1px;
+    background-color: #ccc;
+    margin-top: 10px;
+}
+  
+.numbered-list li:last-child::after {
+    display: none; /* Hapus garis pada elemen terakhir */
+}
+
+  
+.center {
+    background: #fff;
+    padding: 20px;
+    height: auto; /* Membiarkan tinggi sesuai konten */
+}
+
+.featured {
+    margin-bottom: 20px;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.featured-image {
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.featured-content {
+    padding: 10px;
+}
+
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-content article {
+    background: #fff;
+    padding: 10px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+}
+
+.content-image {
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.content-description {
+    padding: 10px;
+}
+
+.latest-news h2, .ads h2, .more-content h2 {
+    margin: 0 0 10px;
+}
+
+.bottom-section {
+    grid-column: 1 / span 2; /* Membuat bottom-section melebar ke kolom left dan center */
+    grid-row: 2; /* Menempatkan bottom-section di baris kedua */
+    background: #f9f9f9;
+    padding: 20px;
+}
+
+
+.ads {
+    height: 200px; /* Misalnya, tinggi 200px */
+    overflow: hidden; /* Memotong gambar jika melebihi area */
+}
+
+.ads img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Memastikan gambar terlihat sepenuhnya */
+}
+
+
+/* Bottom Section Styling */
+.bottom-section {
+    grid-column: 1 / 3; /* Membuat elemen melebar dari kolom pertama hingga kedua */
+    border-top: 2px solid gray; /* Border atas yang memisahkan */
+    margin-top: 20px; /* Jarak dari elemen di atas */
+    padding-top: 10px; /* Ruang setelah border */
+}
+
+.bottom-section-header {
+    text-align: left; /* Header rata kiri */
+    font-size: 24px; /* Ukuran font lebih besar */
+    margin-bottom: 20px; /* Jarak bawah header dengan grid */
+    color: #333; /* Warna teks header */
+}
+
+/* Grid Container */
+.bottom-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Membuat 4 kolom */
+    gap: 20px; /* Jarak antar item */
+    margin-top: 20px; /* Jarak dari elemen sebelumnya */
+}
+
+/* Grid Item */
+.bottom-grid-item {
+    border: 1px solid #ddd; /* Border di sekitar item */
+    background-color: #f9f9f9; /* Warna latar belakang */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan */
+    padding: 0; /* Hilangkan padding di grid-item */
+    text-align: center; /* Teks rata tengah */
+    display: flex;
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    justify-content: flex-start; /* Menjaga agar elemen berada di atas */
+}
+
+/* Grid Content */
+.bottom-grid-content img {
+    width: 100%; /* Gambar memenuhi lebar container */
+    height: auto; /* Tinggi otomatis agar proporsi gambar tetap */
+    border-bottom: 1px solid #ddd; /* Garis bawah pemisah */
+}
+
+/* Paragraph */
+.bottom-grid-content p {
+    margin: 10px 0; /* Jarak antara paragraf dengan elemen lainnya */
+    font-size: 14px; /* Ukuran font untuk teks */
+    color: #555; /* Warna teks */
+}
+
+footer {
+    background-color: #2e51a2;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30rem;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+  }
+  
+  footer a:hover {
+    color: #2e51a1;
+  }
+  
